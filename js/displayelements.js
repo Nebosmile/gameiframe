@@ -16,7 +16,11 @@ window.onload =function(){
     var background=     document.getElementsByClassName('background')[0];
     var full =          document.getElementsByClassName('full')[0];
     var mainwrap =      document.getElementsByClassName('mainwrap')[0];
+    var iframewrapper =document.getElementsByClassName('iframewrapper')[0];
+    var gamecontent = document.getElementById('gamecontent');
+    console.log(gamecontent);
     var history;
+
 
 
     background.addEventListener("click",function(){
@@ -34,7 +38,7 @@ window.onload =function(){
         }
     }
     full.addEventListener("click",function(){
-        launchFullScreen(document.body)
+        launchFullScreen(gamecontent)
     });
 
     buttomFavorit.addEventListener("click",function(){
@@ -53,8 +57,11 @@ window.onload =function(){
             rightmenu.classList.add('rightmenuopen');
             closemenu.classList.add('openx1');
             info.style.display="none";
+            iframewrapper.classList.add("closeiframewrapper");
+            gamecontent.classList.add("gamecontenopen");
         }
         else{
+
             rightmenu.classList.remove('rightmenuopen');
             closemenu.classList.remove('openx1');
             info.style.display="block";
@@ -65,11 +72,14 @@ window.onload =function(){
         rightmenu.classList.add('rightmenuopen');
         closemenu.classList.add('openx1');
         info.style.display="none";
+
         }
         else{
             rightmenu.classList.remove('rightmenuopen');
             closemenu.classList.remove('openx1');
             info.style.display="block";
+            iframewrapper.classList.remove("closeiframewrapper");
+            gamecontent.classList.remove("gamecontenopen");
         }
     });
 
@@ -162,7 +172,3 @@ window.onload =function(){
     });
 
 };
-
-
-
-
