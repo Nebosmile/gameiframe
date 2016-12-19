@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <div class="menuline">
+        <div class="menuwrap center">
+            <a class="logo" href=""><img src="img/logo.png"></a>
+            <script>
+                var natural =document.getElementsByTagName("img")[0];
+
+                alert(natural.naturalWidth);
+            </script>
+            <ul class="menu">
+                <li class="favorit"><a>ФАВОРИТЫ</a></li>
+                <li><a href="">ИГРЫ КАЗИНО</a></li>
+                <li><a href="">МEТОДЫ ОПЛАТЫ</a></li>
+                <li><a href="">LIVE CHAT</a></li>
+                <li><a href="">ВОЙТИ</a></li>
+                <li><a href="">РЕГИСТРИРОВАТЬСЯ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="undermenu" >
+        <div class="favorit_menu center">
+            <a href=""><img src="img/aliens.png"></a>
+            <a href=""><img src="img/starbust.png"></a>
+            <a href=""><img src="img/tax.png"></a>
+            <a href=""><img src="img/hades.png"></a>
+            <a href=""><img src="img/hammer.png"></a>
+            <a href=""><img src="img/space.png"></a>
+        </div>
+    </div>
+
+</header>
+<div class="mainwrap">
+    <div class="forstatistic">
+        <div class="background"></div>
+        <div class="statconteiner center">
+            <div class="modalhead">
+                <p>ИГРОВАЯ ИСТОРИЯ</p>
+                <select class="select">
+                    <option selected value="all">все операции</option>
+                    <option value="win">выигрыши</option>
+                    <option value="bet">ставки</option>
+                </select>
+
+            </div>
+            <table >
+                <thead>
+                <tr class="yellow">
+                    <th>Время</th>
+                    <th>Операция</th>
+                    <th>Сумма</th>
+                </tr>
+                </thead>
+                <tbody class="statictable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+    <div>
+        <table id="gamecontent">
+            <tr class="gameconteiner center">
+                <td class="x"></td>
+                <td class="i">i</td>
+                <td class="iframewrapper">  <iframe src="iframe.html"></iframe></td>
+                <td class="righwrape">
+                    <div class="rightmenu">
+                        <p class="tower">В настоящие время вы играете в <span class="yellow">"Паровая башня"</span></p>
+                        <div class="rightoptions">
+                            <p class="favor">Favourite</p>
+                            <p class="full">Fullscreen</p>
+                            <p class="hide">Hide</p>
+                        </div>
+                        <div class="statistic">СТАТИСТИКА</div>
+                        <div class="gamemenu">
+                            <div class="line">
+                                <a href=""><img src="img/aliens.png">
+                                    <span class="yellow">DOLPHIN'S PEARL</span><br>
+                                    ВИДЕО СЛОТ
+                                </a>
+                                <a href=""><img src="img/starbust.png">
+                                    <span class="yellow">DOLPHIN'S PEARL</span><br>
+                                    ВИДЕО СЛОТ
+                                </a>
+
+                            </div>
+                            <div class="line">
+                                <a href=""><img src="img/tax.png">
+                                    <span class="yellow">DOLPHIN'S PEARL</span><br>
+                                    ВИДЕО СЛОТ
+                                </a>
+                                <a href=""><img src="img/hades.png">
+                                    <span class="yellow">DOLPHIN'S PEARL</span><br>
+                                    ВИДЕО СЛОТ
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<script src="js/displayelements.js"></script>
+
+</body>
+</html>
