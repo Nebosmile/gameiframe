@@ -72,12 +72,13 @@ body {
   background-image: url("../img/under_background.png");
   font-family: arial, sans-serif;
   background-position: center top 20px;
-  overflow: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
-/* line 56, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 body .mainwrap {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
@@ -88,28 +89,30 @@ body .mainwrap {
   height: 100%;
   display: table;
 }
-/* line 66, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 body .mainwrap .maingame {
   display: table-cell;
   vertical-align: middle;
+  padding-right: 30px;
+  margin-right: -30px;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .center {
   margin: 0 auto;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .yellow {
   color: #ffdd65;
 }
 
-/* line 83, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 header {
   width: 100%;
   position: relative;
 }
-/* line 87, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 header .menuline {
   cursor: pointer;
   height: calc(1vw + 30px);
@@ -128,7 +131,7 @@ header .menuline {
   position: relative;
   z-index: 2;
 }
-/* line 97, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 header .undermenu {
   background: url(../img/under_background.png) repeat;
   position: relative;
@@ -137,27 +140,27 @@ header .undermenu {
   z-index: 1;
   transition: margin-top 0.2s linear;
 }
-/* line 105, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 header .undermenu.open {
   margin-top: 0;
 }
-/* line 110, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 header .undermenu .favorit_menu {
   max-width: 1100px;
 }
-/* line 112, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 header .undermenu .favorit_menu img {
   padding: 15px 0 15px 10px;
   width: 4vw;
   max-width: 60px;
   min-width: 40px;
 }
-/* line 120, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 header .undermenuclose {
   margin-top: -100px;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .menuwrap {
   height: 100%;
   width: 100%;
@@ -165,25 +168,25 @@ header .undermenuclose {
   max-height: 46px;
   overflow: hidden;
 }
-/* line 133, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .menuwrap .logo {
   float: left;
   height: 100%;
   max-height: 46px;
 }
-/* line 138, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .menuwrap .logo img {
   height: 100%;
 }
-/* line 143, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .menuwrap .menu {
   overflow: hidden;
 }
-/* line 146, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .menuwrap .menu li {
   float: left;
 }
-/* line 149, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 .menuwrap .menu li a {
   font-size: calc(0.6vw + 4px);
   box-sizing: content-box;
@@ -192,7 +195,7 @@ header .undermenuclose {
   color: #fff;
   text-decoration: none;
 }
-/* line 157, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 .menuwrap .menu li a:hover {
   color: #000;
   background: #fff919;
@@ -207,7 +210,7 @@ header .undermenuclose {
   /* IE6-9 */
   box-shadow: -2px 0 0 0 #5e0113 inset, 2px 0 0 0 #5e0113 inset,0px -2px 1px -1px #fff inset;
 }
-/* line 162, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .menuwrap .menu li.checked a {
   color: #000;
   background: #fff919;
@@ -223,26 +226,19 @@ header .undermenuclose {
   box-shadow: -2px 0 0 0 #5e0113 inset, 2px 0 0 0 #5e0113 inset,0px -2px 1px -1px #fff inset;
 }
 
-/* line 170, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 #gamecontent {
   background: url("../img/under_background.png");
   position: relative;
   border-collapse: inherit;
   border: solid 4px #000;
-  max-height: 615px;
   border-spacing: 0;
   margin: 0 auto;
-  margin-top: 30px;
+  left: 15px;
   background-color: #000;
-  width: calc(100vw - 64px);
   transition: width 0.5s linear, hight 0.5s linear;
-  max-width: 1400px;
 }
-/* line 184, ../sass/style.scss */
-#gamecontent.gamecontenopen {
-  width: 100vw;
-}
-/* line 188, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 #gamecontent .gameconteiner {
   box-sizing: border-box;
   height: 100%;
@@ -250,7 +246,7 @@ header .undermenuclose {
   max-width: 1100px;
   position: relative;
 }
-/* line 195, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 #gamecontent .gameconteiner .x {
   position: absolute;
   top: -4px;
@@ -262,12 +258,12 @@ header .undermenuclose {
   border-radius: 0 4px 4px 0;
   z-index: 3;
 }
-/* line 207, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 #gamecontent .gameconteiner .openx1 {
   top: 0;
   right: 0;
 }
-/* line 211, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 #gamecontent .gameconteiner .i {
   font-size: 20px;
   font-weight: 500;
@@ -282,98 +278,97 @@ header .undermenuclose {
   border-radius: 0 4px 4px 0;
   background: #000;
 }
-/* line 226, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 #gamecontent .gameconteiner .iframewrapper {
   vertical-align: middle;
   line-height: 0;
-  height: calc((100vw - 72px)/1.777);
-  width: calc(100vw - 64px);
-  max-width: 1100px;
+  height: calc((100vw - 500px)/1.777);
+  width: calc(100vw - 500px);
   transition: width 0.5s linear, height 0.5s linear;
+  min-width: 700px;
+  min-height: 394px;
   overflow: hidden;
 }
-/* line 236, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
+#gamecontent .gameconteiner .iframewrapper #forfullscreen {
+  height: calc((100vw - 500px)/1.777);
+  min-height: 394px;
+  width: calc(100vw - 500px);
+  min-width: 700px;
+}
+/* line 249, ../sass/style.scss */
 #gamecontent .gameconteiner .iframewrapper iframe {
   overflow: hidden;
   height: 100%;
   max-height: 100%;
   width: 100%;
 }
-/* line 243, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 #gamecontent .gameconteiner .closeiframewrapper {
-  width: calc(100vw - 300px);
-  max-width: 1100px;
-  height: calc((100vw - 300px)/1.777);
+  width: calc(100vw - 500px);
   transition: width 0.5s linear, height 0.5s linear;
-  max-height: 615px;
 }
-/* line 250, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 #gamecontent .gameconteiner .righwrape {
   position: relative;
   overflow: hidden;
   font-size: 14px;
   line-height: 1.4;
-  max-height: 615px;
   vertical-align: top;
 }
-/* line 259, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
+#gamecontent .gameconteiner #fullout {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  z-index: 99999999;
+  background: url(../img/full.png) center no-repeat;
+}
+/* line 279, ../sass/style.scss */
+#gamecontent .gameconteiner #fulls {
+  width: 100%;
+  height: 100%;
+}
+/* line 283, ../sass/style.scss */
 #gamecontent .gameconteiner .rightmenu {
   width: 300px;
   color: #fff;
   overflow: hidden;
   position: relative;
   margin-left: -300px;
-  height: 40vw;
+  height: calc((100vw - 500px)/2);
   max-height: 615px;
   transition: margin-left 0.5s linear;
 }
-/* line 268, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 #gamecontent .gameconteiner .rightmenu > div, #gamecontent .gameconteiner .rightmenu > p {
   margin-left: 25px;
   padding-right: 18px;
 }
-/* line 272, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 #gamecontent .gameconteiner .rightmenu.rightmenuopen {
   margin-left: 0;
   height: 100%;
 }
-/* line 276, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 #gamecontent .gameconteiner .rightmenu .tower {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-/* line 280, ../sass/style.scss */
-#gamecontent .gameconteiner .rightmenu .statistic {
-  width: 60%;
-  padding: 15px;
-  margin: 0 auto;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#38bef0+0,005081+49,005081+55,38bef0+98 */
-  background: #38bef0;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #38bef0 0%, #005081 49%, #005081 55%, #38bef0 98%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #38bef0 0%, #005081 49%, #005081 55%, #38bef0 98%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #38bef0 0%, #005081 49%, #005081 55%, #38bef0 98%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38bef0', endColorstr='#38bef0',GradientType=0 );
-  /* IE6-9 */
-  border-radius: 5px;
-  text-align: center;
-  font-size: calc(1vw + 5px);
-  margin-bottom: 20px;
-}
-/* line 293, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 #gamecontent .gameconteiner .gamemenu {
   margin-left: 0 !important;
   width: 100%;
 }
-/* line 296, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 #gamecontent .gameconteiner .gamemenu .line {
   width: 100%;
   overflow: hidden;
 }
-/* line 301, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 #gamecontent .gameconteiner .gamemenu a {
   color: white;
   display: inline-block;
@@ -383,20 +378,21 @@ header .undermenuclose {
   margin-bottom: 15px;
   line-height: 1.5;
   text-decoration: none;
-  font-size: calc(0.3vw + 6px);
+  font-size: 11px;
 }
-/* line 311, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 #gamecontent .gameconteiner .gamemenu a img {
   width: 70%;
   max-width: 110px;
 }
 
-/* line 319, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .rightoptions {
   overflow: hidden;
   margin-bottom: 30px;
+  position: relative;
 }
-/* line 323, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .rightoptions p {
   float: left;
   display: inline-block;
@@ -405,125 +401,15 @@ header .undermenuclose {
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 331, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .rightoptions p.favor {
   background-image: url(../img/star.png);
 }
-/* line 335, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .rightoptions p.full {
   background-image: url(../img/full.png);
 }
-/* line 338, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 .rightoptions p.hide {
   background-image: url(../img/hide.png);
-}
-
-/* line 344, ../sass/style.scss */
-.forstatistic {
-  display: none;
-  position: absolute;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-}
-/* line 352, ../sass/style.scss */
-.forstatistic .background {
-  position: absolute;
-  z-index: 8;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-/* line 359, ../sass/style.scss */
-.forstatistic .statconteiner {
-  position: relative;
-  z-index: 9;
-  width: 100%;
-  max-width: 614px;
-  margin-top: 10vw;
-  border: solid 2px #e7e67d;
-}
-/* line 367, ../sass/style.scss */
-.forstatistic thead {
-  border-top: solid 1px #6f6939;
-  border-bottom: solid 1px #6f6939;
-  background-color: #122200;
-}
-/* line 372, ../sass/style.scss */
-.forstatistic td, .forstatistic th {
-  padding: 10px 0;
-}
-
-/* line 376, ../sass/style.scss */
-.statictable tr {
-  background-color: #0d1801;
-}
-
-/* line 379, ../sass/style.scss */
-.statictable tr:nth-child(2n) {
-  background-color: #091100;
-}
-
-/* line 382, ../sass/style.scss */
-.modalhead {
-  padding: 10px 30px;
-  overflow: hidden;
-  background-color: #122200;
-}
-/* line 386, ../sass/style.scss */
-.modalhead p {
-  line-height: 1.4;
-  float: left;
-  font-size: 20px;
-  font-weight: 600;
-}
-/* line 392, ../sass/style.scss */
-.modalhead select {
-  padding: 5px;
-  font-size: 14px;
-  width: 130px;
-  color: white;
-  border: solid 1px #685c26;
-  border-radius: 3px;
-  float: right;
-  background-color: #090f01;
-}
-/* line 401, ../sass/style.scss */
-.modalhead select:focus {
-  border: solid 1px #685c26;
-  outline: none;
-}
-/* line 405, ../sass/style.scss */
-.modalhead select:checked {
-  outline: none;
-  border: solid 1px #685c26;
-}
-/* line 410, ../sass/style.scss */
-.modalhead select option {
-  border: none;
-  outline: none;
-}
-/* line 413, ../sass/style.scss */
-.modalhead select option:focus {
-  border: none;
-  outline: none;
-}
-/* line 417, ../sass/style.scss */
-.modalhead select option:hover {
-  background-color: #685c26;
-}
-
-/* line 423, ../sass/style.scss */
-.forstatistic table {
-  width: 100%;
-  vertical-align: middle;
-}
-/* line 426, ../sass/style.scss */
-.forstatistic table th {
-  text-align: center;
-}
-/* line 429, ../sass/style.scss */
-.forstatistic table td {
-  text-align: center;
 }
